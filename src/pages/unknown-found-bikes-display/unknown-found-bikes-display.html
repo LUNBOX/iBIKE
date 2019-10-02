@@ -1,0 +1,111 @@
+<ion-header>
+    <ion-navbar color='primary'>
+  <ion-buttons left>
+   <button ion-button menuToggle>
+     <ion-icon name='menu'></ion-icon>
+   </button>
+  </ion-buttons> 
+  <!-- put above all tabs u show -->
+    <!-- <ion-title >iBIKE</ion-title>  -->
+  </ion-navbar>
+  
+  <ion-toolbar padding color="secondary">
+    <p ion-text no-margin class="text-white">
+      <strong> Below are the latest unknown bikes that have been found</strong>
+    </p>
+  
+  </ion-toolbar>
+  </ion-header>
+  <ion-content>
+  <ion-card *ngFor="let event of eventLists" (click)="GoToUserEventDetailPage(event.id)">
+  <ion-list>
+    <ion-item>
+    <ion-avatar item-start>
+    <img [src]=path>
+    </ion-avatar>
+    <h2>USER NAME</h2>
+    <p>DATE</p>
+    </ion-item>
+    <ion-item>
+      <p>Brand:
+        <strong>{{event.name}}</strong>
+      </p>
+      <p>Area bike was found:
+      <strong>{{event.venue}}</strong>
+    </p>
+    <p>County:
+        <strong>{{event.colour}}</strong>
+      </p>
+      <p>Colour:
+        <strong>{{event.county}}</strong>
+      </p>
+    </ion-item>
+  </ion-list>
+    <img [src]="path">
+  
+    <ion-card-content>
+      <p></p>
+    </ion-card-content>
+  
+    <ion-row>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-start>
+          <ion-icon name='thumbs-up'></ion-icon>
+          {{likes}} Likes
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-start>
+          <ion-icon name='text'></ion-icon>
+          4 Comments
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  </ion-content>
+  <ion-footer><p>iBIKE</p></ion-footer>
+  <!--<ion-content>-->
+  
+  <!--<ion-card *ngFor="let item of cardItems">-->
+  
+    <!--<ion-item>-->
+      <!--<ion-avatar item-start>-->
+        <!--<img [src]="item.user_avtar">-->
+      <!--</ion-avatar>-->
+      <!--<h2>{{item.user_name}}</h2>-->
+      <!--<p>{{item.date}}</p>-->
+    <!--</ion-item>-->
+  
+    <!--<img (tap)="dblClickEvent($event,item.user_name)"  [src]="item.image">-->
+  
+    <!--<ion-card-content>-->
+      <!--<p>{{item.content}}</p>-->
+    <!--</ion-card-content>-->
+  
+    <!--<ion-row>-->
+      <!--<ion-col>-->
+        <!--<button ion-button color="primary" clear small icon-start>-->
+          <!--<ion-icon name='thumbs-up'></ion-icon>-->
+          <!--{{likes}} Likes-->
+        <!--</button>-->
+      <!--</ion-col>-->
+      <!--<ion-col>-->
+        <!--<button ion-button color="primary" clear small icon-start>-->
+          <!--<ion-icon name='text'></ion-icon>-->
+          <!--4 Comments-->
+        <!--</button>-->
+      <!--</ion-col>-->
+      <!--<ion-col center text-center>-->
+        <!--<ion-note>-->
+          <!--11h ago-->
+        <!--</ion-note>-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
+  <!--</ion-card>-->
+  <!--</ion-content>-->
+  

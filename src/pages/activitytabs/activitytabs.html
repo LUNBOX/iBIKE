@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar color='secondary'>
+  <ion-buttons left>
+    <button ion-button menuToggle>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+  </ion-buttons> 
+<ion-title>
+  <ion-icon name="barcode" class="text-primary"></ion-icon>
+  <span class="text-primary">iBIKE</span>
+</ion-title>
+</ion-navbar>
+</ion-header>
+
+<ion-tabs>
+  <ion-tabs color="secondary" [selectedIndex]="0">
+  <ion-tab [root]="tab1Root" tabTitle="Details" tabIcon="home"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Activity Level" tabIcon="walk"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Goals" tabIcon="calculator"></ion-tab>
+    <!-- <ion-tab [root]="tab1Root" tabTitle="Maps" tabIcon="pin"></ion-tab>
+    <ion-tab [root]="tab2Root" tabTitle="Bike Places" tabIcon="bicycle"></ion-tab> -->
+</ion-tabs>

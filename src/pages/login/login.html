@@ -1,0 +1,69 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/img/LOGO1.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+
+
+</div>
+
+
+<ion-content padding ion-content class="background">
+<ion-grid>
+    <div class="button-bottom">
+        
+        <h1 ion-text text-center class=whitetext>
+          
+            </h1>
+            <ion-row>
+      <button ion-button color="fb" icon-only block class="btn-facebook" (click)="facebookLogin()">
+        <ion-icon name="logo-facebook"></ion-icon>
+        Facebook
+      </button>
+    </ion-row>
+   
+  <ion-row>
+        <button ion-button color="danger" icon-only block class="btn-gplus" (click)="googleLogin()">
+          <ion-icon name="logo-google"></ion-icon>Google
+        </button>
+      </ion-row>
+              <ion-row>
+                <ion-col col-6>
+                    <button ion-button color="light" block outline style="color:white" (click)="goToLoginWithEmailPage()">
+                      
+                        <ion-icon name="mail"></ion-icon>
+                               Login with Email 
+                      </button>
+                </ion-col>
+                  <ion-col col-6>
+                      <button ion-button color="light" block outline style="color:white" (click)="goToSignup()">
+                          Sign Up
+                        </button>
+                  </ion-col>
+              </ion-row>
+            
+          
+ 
+</div>
+</ion-grid>
+  
+
+
+<button ion-button block clear (click)="goToResetPassword()">
+
+</button>
+
+
+
+<button ion-button block clear (click)="goToResetPassword()">
+
+</button>
+
+<div style="position: relative">
+    <p style="position: fixed; bottom: 0; width:90%;"> By signing up, I agree to iBIKE's <strong color="red">Terms of Service</strong> and <strong>Private Policy</strong>
+    </p>
+</div>
+</ion-content>
+
+

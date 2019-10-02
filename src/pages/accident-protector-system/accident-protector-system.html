@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-navbar color='primary'>
+ <ion-buttons left>
+   <button ion-button menuToggle>
+     <ion-icon name='menu'></ion-icon>
+   </button>
+ </ion-buttons> 
+ <!-- put above all tabs u show -->
+    <!-- <ion-title >iBIKE</ion-title>  -->
+  </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding class ='background'>
+  
+    <button full round ion-button color="primary" (click)="startWatching()">Turn SMS Accident Proitector On</button>
+  
+    <ion-card *ngIf="data">
+      <ion-card-content>
+        <h2>x: {{data.x | number: '1.4-4'}}</h2>
+        <h2>y: {{data.y | number: '1.4-4'}}</h2>
+        <h2>z: {{data.z | number: '1.4-4'}}</h2>
+      </ion-card-content>
+    </ion-card>
+    <button ion-button block class="btn" (click)="StartDrop1()"><strong>Drop phone when press this button</strong></button>
+    <ion-card *ngIf="data2">
+      <ion-card-content>
+        <h2>x: {{data2.x | number: '1.4-4'}}</h2>
+        <h2>y: {{data2.y | number: '1.4-4'}}</h2>
+        <h2>z: {{data2.z | number: '1.4-4'}}</h2>
+      </ion-card-content>
+    </ion-card>
+    <!-- <img src="assets/img/giphy.gif"> -->
+    <button round class="stop-btn" ion-button color='danger' (click) ="stopWatching()">Turn Off
+        <ion-toggle checked="true" margin (click) ="stopWatching()"></ion-toggle>
+    </button>
+    <ion-item>
+        <ion-input [(ngModel)]="dist"></ion-input>
+      </ion-item>
+      <ion-fab bottom left>
+          <button ion-fab color='light'><ion-icon name="ios-timer"></ion-icon></button>
+          <ion-fab-list side="right">
+              <button  ion-button color="secondary" (click) ="setTimeout1()">10 secs</button>
+              <button  ion-button color="secondary" (click) ="setTimeout2()">20 secs</button>
+              <button  ion-button color="secondary" (click) ="setTimeout3()">30 secs</button>
+          </ion-fab-list>
+        </ion-fab>
+        
+  </ion-content>

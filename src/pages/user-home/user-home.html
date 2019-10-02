@@ -1,0 +1,45 @@
+<!--
+  Generated template for the UserHomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color='primary'>
+ <ion-buttons left>
+   <button ion-button menuToggle>
+     <ion-icon name='menu'></ion-icon>
+   </button>
+ </ion-buttons> 
+ <!-- put above all tabs u show -->
+    <!-- <ion-title >iBIKE</ion-title>  -->
+  </ion-navbar>
+
+<ion-toolbar padding color="secondary">
+    <p ion-text no-margin class="text-white">
+      <strong> Below are the bikes that are reported stolen</strong>
+    </p>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  
+  <ion-list *ngFor="let event of eventLists" (click)="GoToUserEventDetailPage(event.id)">
+    <ion-item>
+      <p>Brand:
+        <strong>{{event.name}}</strong>
+      </p>
+      <p>Area bike was stolen:
+      <strong>{{event.venue}}</strong>
+    </p>
+    <p>County:
+        <strong>{{event.colour}}</strong>
+      </p>
+      <p>Colour:
+        <strong>{{event.county}}</strong>
+      </p>
+    </ion-item>
+  </ion-list>
+  </ion-content>
+<ion-footer><p>iBIKE</p></ion-footer>

@@ -1,0 +1,22 @@
+page-event-detail {
+  .background {
+    background-image: url('../assets/img/DetailBackgroundPic.jpg');
+  }
+  ion-card-header {
+    text-align: center;
+  }
+
+  .add-guest-form {
+    button {
+      margin-top: 16px;
+    }
+  }
+
+  .profitable {
+    color: #22bb22;
+  }
+
+  .no-profit {
+    color: #ff0000;
+  }
+}

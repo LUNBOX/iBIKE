@@ -1,0 +1,26 @@
+page-user-event-details {
+  .background {
+    background-image: url('../assets/img/DetailBackgroundPic.jpg');
+  }
+
+  .scroll-content {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  ion-card {
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
+  .bottom {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+
+

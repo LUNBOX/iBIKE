@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Qr Scanner</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <button ion-button (click)="scanBarcode()" >Scan Barcode</button>
+
+  <div *ngIf="results">
+  </div>
+
+  <p>{{statement}}</p>
+
+
+</ion-content>
+

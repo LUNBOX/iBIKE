@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar color='primary'>
+ <ion-buttons left>
+   <button ion-button menuToggle>
+     <ion-icon name='menu'></ion-icon>
+   </button>
+ </ion-buttons> 
+ <!-- put in logopic in right -->
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-item>
+          <ion-label floating>Starting Point</ion-label>
+          <ion-input type="text" [(ngModel)]="From"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label floating>Destination</ion-label>
+          <ion-input type="text" [(ngModel)]="Destination"></ion-input>
+        </ion-item>
+      </ion-row>
+
+    </ion-grid>
+
+  </ion-list>
+  <div align="center">
+      <button  ion-button  round color='dark'(click)="NightMode()">  <ion-icon name="moon"></ion-icon>Night</button>
+      <button ion-button round color='greenpass' (click)="DisplayAndAnimateRoute()">Show Route</button>
+      <button  ion-button  round color='light'(click)="DisplayAndAnimateRoute()"> <ion-icon name="sunny"></ion-icon>Day</button>
+  </div>
+
+  <div id="map"></div>
+ 
+  <!-- <button class="geolocation-btn" ion-button (click)="tryGeolocation()"> My location </button> -->
+        <div id="right-panel"></div>
+</ion-content>
+<ion-footer><p>iBIKE</p></ion-footer>

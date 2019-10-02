@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>speedomter</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="clearHistory()">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="history-page">
+  <div *ngIf="history.length == 0" text-center text-justify>
+    <ion-label>Empty ...</ion-label>
+  </div>
+
+  <ion-list>
+    <ion-card class="rtl" *ngFor="let item of history">
+      <ion-row>
+        <ion-col (click)="showMap(item.s_lat, item.s_lon)">:from<h5 ion-text color="primary"> {{item.s_lat}},
+          {{item.s_lon}}</h5>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col (click)="showMap(item.d_lat, item.d_lon)">:to<h5 ion-text color="primary"> {{item.d_lat}},
+          {{item.d_lon}}</h5>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>km: {{item.distance | convertdigit}}</ion-col>
+        <ion-col>:average speed {{item.avgSpeed | convertdigit}} km/h</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>minutes{{item.time| convertdigit}} :period of time</ion-col>
+        <ion-col>{{item.date | convertdigit}}:Date</ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-list>
+
+</ion-content>

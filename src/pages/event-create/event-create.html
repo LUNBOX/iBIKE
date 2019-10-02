@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-navbar color='primary'>
+    <ion-title>New Event</ion-title>
+  </ion-navbar>
+  <ion-toolbar padding color="secondary">
+    <p ion-text no-margin class="text-white">
+      <strong>All fields below need to be filled</strong>
+    </p>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked>Bike Brand</ion-label>
+    <ion-input [(ngModel)]="eventName" type="text" placeholder="What's your Bike's Brand?">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Last Location of Bike</ion-label>
+    <ion-input [(ngModel)]="venue" type="text" placeholder="Last location of Bike">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>County</ion-label>
+    <ion-select [(ngModel)]="county">
+      <ion-option value="Antrim">Antrim</ion-option>
+      <ion-option value="Armagh">Armagh</ion-option>
+      <ion-option value="Carlow">Carlow</ion-option>
+      <ion-option value="Cavan">Cavan</ion-option>
+      <ion-option value="Clare">Clare</ion-option>
+      <ion-option value="Cork">Cork</ion-option>
+      <ion-option value="Derry">Derry</ion-option>
+      <ion-option value="Donegal">Donegal</ion-option>
+      <ion-option value="Down">Down</ion-option>
+      <ion-option value="Dublin">Dublin</ion-option>
+      <ion-option value="Fermanagh">Fermanagh</ion-option>
+      <ion-option value="Galway">Galway</ion-option>
+      <ion-option value="Kerry">Kerry</ion-option>
+      <ion-option value="Kildare">Kildare</ion-option>
+      <ion-option value="Kilkenny">Kilkenny</ion-option>
+      <ion-option value="Laois">Laois</ion-option>
+      <ion-option value="Leitrim">Leitrim</ion-option>
+      <ion-option value="Limerick">Limerick</ion-option>
+      <ion-option value="Longford">Longford</ion-option>
+      <ion-option value="Louth">Louth</ion-option>
+      <ion-option value="Mayo">Mayo</ion-option>
+      <ion-option value="Meath">Meath</ion-option>
+      <ion-option value="Monaghan">Monaghan</ion-option>
+      <ion-option value="Offaly">Offaly</ion-option>
+      <ion-option value="Roscommon">Roscommon</ion-option>
+      <ion-option value="Sligo">Sligo</ion-option>
+      <ion-option value="Tipperary">Tipperary</ion-option>
+      <ion-option value="Tyrone">Tyrone</ion-option>
+      <ion-option value="Waterford">Waterford</ion-option>
+      <ion-option value="Westmeath">Westmeath</ion-option>
+      <ion-option value="Wexford">Wexford</ion-option>
+      <ion-option value="Wicklow">Wicklow</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label stacked>Colour</ion-label>
+    <ion-select [(ngModel)]="colour">
+      <ion-option value="White">White</ion-option>
+      <ion-option value="Red">Red</ion-option>
+      <ion-option value="Black">Black</ion-option>
+      <ion-option value="Grey">Grey</ion-option>
+      <ion-option value="Other">Other</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label stacked>Description</ion-label>
+    <ion-input [(ngModel)]="eventDescription" type="text" placeholder="What's your bike's description?">
+    </ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Bike stolen Date</ion-label>
+    <ion-datetime min="2018" max="2099-10-31" displayFormat="D MMM, YY" pickerFormat="DD MMM YYYY" [(ngModel)]="eventDate">
+    </ion-datetime>
+  </ion-item>
+
+  <button ion-button block (click)="createEvent(eventName, eventDate,eventDescription, venue,county,colour,stolenStatus)">
+    Add your bike details
+  </button>
+  <!--<ion-item *ngIf="statement">-->
+    <!--<p><strong><a>{{statement}}</a></strong></p>-->
+  <!--</ion-item>-->
+</ion-content>

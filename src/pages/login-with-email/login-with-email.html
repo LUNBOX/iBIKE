@@ -1,0 +1,64 @@
+<!--
+  Generated template for the LoginWithEmailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color='primary'>
+    <ion-title>Log in</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div padding-horizontal text-center class="animated fadeInDown">
+        <div class="logo"></div>
+        <h2 ion-text class="text-primary">
+          <!--maybe change color-->
+          <strong>iBIKE</strong> <!--Start Theme-->
+          </h2>
+        </div>
+      
+        <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
+          <ion-item>
+            <ion-label stacked>
+              <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+              Email
+            </ion-label>
+            <ion-input formControlName="email" type="email" placeholder="Your email address"
+              [class.invalid]="!loginForm.controls.email.valid && blur">
+            </ion-input>
+          </ion-item>
+      
+          <!--error message-->
+          <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid &&
+           loginForm.controls.email.touched">
+            <p>Please enter a valid email address please.</p>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label stacked>
+              <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+              Password
+            </ion-label>
+            <ion-input formControlName="password" type="password" placeholder="Your password"
+              [class.invalid]="!loginForm.controls.password.valid && blur">
+            </ion-input>
+          </ion-item>
+          <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid
+          && loginForm.controls.password.touched">
+            <p>Your password needs at least 6 characters.</p>
+          </ion-item>
+      
+          <button ion-button block type="submit" [disabled]="!loginForm.valid">
+            Log In
+          </button>
+        </form>
+        <button ion-button block clear (click)="goToResetPassword()">
+            Forgot password
+          </button>
+        
+        
+</ion-content>

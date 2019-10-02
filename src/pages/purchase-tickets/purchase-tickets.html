@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color='primary'>
+    <ion-title>Purchase</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <p><strong>Choose number of tickets you would you like?</strong></p>
+
+  <ion-item>
+    <ion-input [(ngModel)]="numberOfTickets" max="4" min="0" type="number" placeholder="Number of Tickets"></ion-input>
+  </ion-item>
+
+
+  <!--<form action="/" method="post" id="payment-form">-->
+
+    <!--<div class="form-row">-->
+      <!--<div id="card-element">-->
+        <!--&lt;!&ndash; a Stripe Element will be inserted here. &ndash;&gt;-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash; Used to display Element errors &ndash;&gt;-->
+      <!--<div id="card-errors" role="alert"></div>-->
+    <!--</div>-->
+  <p>Please contact {{statement3}}</p>
+    <button ion-button block color="greenpass"(click)="purchase(numberOfTickets)"> <strong>Report as stolen</strong></button>
+
+  <!--</form>-->
+  <h2>{{statement}}</h2>
+
+  <ion-item *ngIf="statement1">
+    <strong><span><a>{{statement1}}</a></span></strong>
+  </ion-item>
+</ion-content>

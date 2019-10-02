@@ -1,0 +1,17 @@
+page-accident-protector-system {
+    .background {
+        background-image: url('../assets/img/bgrecord3.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .stop-btn {
+      
+        
+        border: 1px solid white;
+        position:absolute;
+        transition: .5s ease;
+          right: 80px;
+            top: 380px;
+    }
+}

@@ -1,0 +1,36 @@
+<ion-header>
+
+    <ion-navbar color='primary'>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name='menu'></ion-icon>
+      </button>
+    </ion-buttons> 
+  <ion-title>
+    <ion-icon name="barcode" class="text-primary"></ion-icon>
+    <span class="text-primary">QR</span>
+  </ion-title>
+</ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+<!--<ion-item>-->
+<!--<iion-contentpe="text" placeholder="My QR date" [(ngModel)]="qrData"></ion-input>-->
+<!--</ion-item>-->
+<!--<a ng-init ="createCode()"></a>-->
+<!--<button ion-button (click)="createCode()"><ion-icon name="barcode"></ion-icon> QR Code</button>-->
+
+
+<ion-card *ngIf="createdCode">
+  <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+</ion-card>
+
+<!-- <ion-card *ngIf="scannedCode">
+  <ngx-qrcode [qrc-value]="scannedCode"></ngx-qrcode>
+</ion-card>-->
+
+
+
+</ion-content>

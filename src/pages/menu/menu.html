@@ -1,0 +1,77 @@
+<ion-menu side="left" id="authenticated" [content]="content">
+		<ion-header>
+				<!-- <ion-toolbar>
+						<button ion-button menuToggle right>
+							<ion-icon name="menu"></ion-icon>
+						</button>
+						<ion-title>Buy Menu</ion-title> -->
+					
+			<ion-toolbar class="user-profile">
+				<!-- <ion-card *ngFor="let pic of photoList" >
+					<ion-item>
+						<h1>{{pic?.name}}</h1>
+							<ion-thumbnail item-left>
+								<img src={{pic?.picture}} >
+							</ion-thumbnail>    
+					</ion-item>
+				</ion-card> -->
+			<ion-grid>
+				<ion-row>
+				<ion-col col-4>
+					<div class="user-avatar">
+							<img [src]=path>
+					</div>
+				</ion-col>
+				<ion-col padding-top col-8>
+					<h2 ion-text class="no-margin bold text-white">
+						Welcome {{this.displayName}}
+						<!-- // Email: {{email}} -->
+					</h2>
+					<span ion-text color="light">{{this.email}}</span>
+					
+				</ion-col>
+				</ion-row>
+		
+				<ion-row no-padding class="other-data">
+				<ion-col no-padding class="column">
+					<button ion-button icon-left small full color="light" menuClose (click)="takeEventPicture()">
+					<ion-icon name="contact"></ion-icon>
+					Edit Profile image
+					</button>
+				</ion-col>
+				<ion-col no-padding class="column">
+					<button ion-button icon-left small full color="light" menuClose (click)="changebacktoOriginalPic()">
+					<ion-icon name="log-out"></ion-icon>
+					Log Out
+					</button>
+				</ion-col>
+				</ion-row>
+		
+			</ion-grid>
+		
+			</ion-toolbar>
+		</ion-header>
+
+		<!-- <ion-content color="primary">
+
+				<ion-list class="user-list">
+					<button ion-item menuClose class="text-1x" *ngFor="let menuItem of appMenuItems" (click)="openPage(menuItem)">
+					<ion-icon item-left [name]="menuItem.icon" color="primary"></ion-icon>
+					<span ion-text color="primary">{{menuItem.title}}</span>
+					</button>
+				</ion-list>
+				</ion-content>
+			
+			</ion-menu> -->
+
+<ion-content class="dark">
+<ion-list>
+	<button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" color="primary">
+			<ion-icon item-left [name]="p.icon" color="secondary"></ion-icon>
+			<span ion-text color="secondary">{{p.title}}</span>
+	</button>
+</ion-list>
+</ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

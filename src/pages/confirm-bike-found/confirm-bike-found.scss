@@ -1,0 +1,22 @@
+page-confirm-bike-found {
+    .background {
+        background-image: url('../assets/img/BGSTOLEBIKES.jpg');
+        
+        background-size: cover;
+clear:both;
+top:40px;
+height: 600px;
+position: relative;
+width: 100%;
+      }
+
+      .btn {
+      
+        
+        border: 1px solid white;
+        position:absolute;
+        transition: .5s ease;
+          right: 0px;
+            top: 300px;
+    }
+}

@@ -1,0 +1,65 @@
+
+
+    <ion-header>
+        <ion-navbar color='primary'>
+     <ion-buttons left>
+       <button ion-button menuToggle>
+         <ion-icon name='menu'></ion-icon>
+       </button>
+     </ion-buttons> 
+     <!-- <ion-icon name="cog" class="text-primary"></ion-icon>
+     <span class="text-primary">Settings</span> -->
+     <ion-buttons end>
+        <button ion-button icon-only (click)="goToProfile()">
+          <ion-icon name="person"></ion-icon>
+        </button>
+      </ion-buttons>
+      </ion-navbar>
+</ion-header>
+
+
+<ion-content class="common-bg">
+  <!-- User settings-->
+  <ion-item-group>
+    <ion-item-divider color="secondary" class="bold"><ion-icon name="cog" class="text-primary"></ion-icon> Settings</ion-item-divider>
+    <!--<ion-item>-->
+    
+  
+    <ion-item>
+      <ion-label>Notifications?</ion-label>
+      <ion-toggle checked="true"></ion-toggle>
+    </ion-item>
+  </ion-item-group>
+  <!-- App settings-->
+  <ion-item-group>
+    <ion-item-divider color="secondary" class="bold">App Settings</ion-item-divider>
+    <ion-item>
+      <p text-left ion-text color="dark" tappable (click)="GoToFaq()"><span>FAQ</span></p>
+    </ion-item>
+    <ion-item>
+      <p text-left ion-text color="dark" tappable (click)="GoToPrivacyPolicy()"><span>Privacy Policy</span></p>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+         <p text-left ion-text color="dark" tappable (click)="GoToDelete()"><span>Deleggte</span> <ion-icon name="information-circle"></ion-icon></p>
+        <!-- <p text-left ion-text color="dark" tappable (click)="GoToAbout()"><span>About</span> <ion-icon name="information-circle"></ion-icon></p> -->
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <p text-left ion-text color="dark" tappable (click)="GoToQRScanner()"><span>QR scanner</span> <ion-icon name="information-circle"></ion-icon></p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+    <ion-label>
+      <p text-left ion-text color="dark" tappable (click)="GoToeventlist()"><span>event tester</span> <ion-icon name="information-circle"></ion-icon></p>
+    </ion-label>
+    </ion-item>
+    <ion-item>
+    <ion-label>
+      <p text-left ion-text color="dark" tappable (click)="GoToContact()"><span>Contact Us </span><ion-icon name=""></ion-icon></p>
+    </ion-label>
+    </ion-item>
+    <button ion-button color="primary" full tappable (click)="GoUserLogOut()">LOG OUT</button>
+  </ion-item-group>
+</ion-content>

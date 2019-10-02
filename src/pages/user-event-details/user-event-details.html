@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color='primary'>
+    <ion-title *ngFor="let event of eventLists">
+      <strong>{{event?.name}} Details</strong></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background">
+  <ion-card>
+    <ion-item *ngFor="let event of eventLists">
+      <ion-card-header><strong><a>{{event?.name}}</a></strong></ion-card-header>
+      <p>Area bike was last seen:
+        <strong>{{event?.venue}}</strong>
+      </p>
+      <p>County:
+        <strong>{{event?.county}}</strong>
+      </p>
+      <p>Colour:
+        <strong> {{event?.colour}}</strong>
+      </p>
+      <p>Date bike was last seen:
+        <strong>{{event?.date}}</strong>
+      </p>
+      <p>Description:
+        <strong> {{event?.description}}</strong>
+      </p>
+      <p>Email to contact:<strong><a href="mailto:{{event?.email}}">{{event?.email}}</a></strong></p>
+
+      <img [src] =path />
+    </ion-item>
+  </ion-card>

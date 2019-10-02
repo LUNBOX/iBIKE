@@ -1,0 +1,31 @@
+
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Record Distance</ion-title>
+      <button ion-button menuToggle color="secondary">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding class="background">
+    <ion-grid>
+      <ion-row align-items-end>
+        <ion-col col-6 offset-2 text-center>
+          <button class="round-btn" ion-button color="pastel" large (click)="navigateToCalculationPage()">GO
+              <ion-icon name="play"></ion-icon>
+            <!-- <span> GO</span> -->
+          </button>
+        </ion-col>
+      </ion-row>
+      <ion-row align-items-end>
+        <ion-col>
+          <button ion-button full round large color="primary" (click)="navigateToHistoryPage()">History<ion-icon name="list-box" margin></ion-icon></button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  

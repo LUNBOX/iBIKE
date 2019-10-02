@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color='primary'>
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background">
+  <ion-card>
+    <ion-card-header><strong><a>{{currentEvent?.name}}</a></strong></ion-card-header>
+    <ion-card-content>
+      <p>Date Stolen:
+        <strong>{{currentEvent?.date}}</strong>
+      </p>
+      <p>Colour:
+        <strong> {{currentEvent?.colour}}</strong>
+      </p>
+      <p>Location last seen:
+        <strong> {{currentEvent?.venue}}</strong>
+      </p>
+
+      <p>County:
+        <strong> {{currentEvent?.county}}</strong>
+      </p>
+
+      <p>Description:
+        <strong> {{currentEvent?.description}}</strong>
+      </p>
+      <button ion-button block class="marginTop" (click)="takeEventPicture()"><strong>Add Picture of Bike</strong></button>
+      <img [src] =path />
+      <!--<ion-item *ngIf="!statement">-->
+      <!--<button ion-button block class="marginTop" (click)="GoToPurchaseTicketsPage(event.id)"><strong>Report Bike as Stolen</strong></button>-->
+      <!--</ion-item>-->
+      <button ion-button color='danger' (click)="GoToConfirmBikeStolen_Page(this.currentEvent.id)"><strong>Bike is Stolen </strong></button>
+      <button ion-button  color="greenpass" (click)="GoToConfirmBike_been_Found_Page(this.currentEvent.id)"><strong>Bike with owner</strong></button>
+      <ion-item *ngIf="statement">
+        <p><strong><a>{{statement}}</a></strong></p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+<ion-footer>ibike</ion-footer>
